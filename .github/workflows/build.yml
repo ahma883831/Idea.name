@@ -13,12 +13,8 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
           channel: 'stable'
 
-      # This repo only tracks lib/ + pubspec.yaml, so scaffold a fresh
-      # Android project and drop our source into it before building —
-      # same approach as the WordQuest repo.
       - name: Scaffold Android project
         run: flutter create --platforms=android temp_app
 
